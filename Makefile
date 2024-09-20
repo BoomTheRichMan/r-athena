@@ -13,3 +13,9 @@ init:
 	chmod -R $(PERMISSIONS) $(DB_DATA_DIR)
 	chmod -R $(PERMISSIONS) $(CONF_DIR)
 	chmod -R $(PERMISSIONS) $(LOGS_DIR)
+
+up:
+	docker compose up -d --build
+
+down:
+	docker compose down
