@@ -1,0 +1,7 @@
+// conf/import/inter_conf.txt
+
+sql.db_hostname: 0.0.0.0
+sql.db_port: 33069
+sql.db_username: rathena
+sql.db_password: your_password
+sql.db_database: ragnarok

@@ -1,0 +1,27 @@
+# conf/inter_server.yml
+
+MySQL:
+  Login:
+    DB_HOST: db
+    DB_PORT: 3306
+    DB_USER: rathena
+    DB_PASS: your_password
+    DB_NAME: ragnarok
+  Char:
+    DB_HOST: db
+    DB_PORT: 3306
+    DB_USER: rathena
+    DB_PASS: your_password
+    DB_NAME: ragnarok
+  Map:
+    DB_HOST: db
+    DB_PORT: 3306
+    DB_USER: rathena
+    DB_PASS: your_password
+    DB_NAME: ragnarok
+  Log:
+    DB_HOST: db
+    DB_PORT: 3306
+    DB_USER: rathena
+    DB_PASS: your_password
+    DB_NAME: ragnarok

@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ragnarok
+      MYSQL_USER: rathena
+      MYSQL_PASSWORD: your_password
+    volumes:
+      - ./disk/db_data:/var/lib/mysql
+    networks:
+      - rathena-network
+
+  rathena:
+    build: .
+    depends_on:
+      - db
+    ports:
+      - '5121:5121'
+      - '6121:6121'
+      - '6900:6900'
+    networks:
+      - rathena-network
+    volumes:
+      - ./disk/conf:/home/rathena/rathena/conf
+      - ./disk/logs:/home/rathena/rathena/logs
+    environment:
+      DB_HOST: db
+      DB_NAME: ragnarok
+      DB_USER: rathena
+      DB_PASS: your_password
+
+networks:
+  rathena-network:
